@@ -56,7 +56,7 @@ void PluggableUSB_::getShortName(char *iSerialNum)
 	for (node = rootNode; node; node = node->next) {
 		iSerialNum += node->getShortName(iSerialNum);
 	}
-	*iSerialNum = 0;
+	*iSerialNum = '\0';
 }
 
 bool PluggableUSB_::setup(USBSetup& setup)
